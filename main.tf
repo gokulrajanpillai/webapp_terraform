@@ -11,7 +11,7 @@ provider "docker" {
   host = "npipe:////.//pipe//docker_engine"
 }
 
-resource "docker_container" "test_container" {
+resource "docker_container" "cut2thechase" {
     image   =   "cut2thechase:0.1"
     name    =   "cut2thechase"
     restart = "always"
