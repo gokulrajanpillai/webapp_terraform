@@ -1,0 +1,9 @@
+services:
+    cut2thechase:
+        image: nginx:alpine
+        ports:
+            - "80:80"
+        volumes:
+            - "./cut2thechase/html:/usr/share/nginx/html"
+        container_name: "cut2thechase_web"
+        restart: always
