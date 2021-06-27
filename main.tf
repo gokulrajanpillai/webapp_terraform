@@ -12,7 +12,7 @@ provider "docker" {
 }
 
 resource "docker_container" "cut2thechase" {
-    image   =   "cut2thechase:0.1"
+    image   =   "cut2thechase:latest"
     name    =   "cut2thechase"
     restart = "always"
     volumes {
