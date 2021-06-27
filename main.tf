@@ -12,16 +12,15 @@ provider "docker" {
 }
 
 resource "docker_container" "test_container" {
-    image   =   "test"
-    name    =   "test_app"
+    image   =   "cut2thechase:0.1"
+    name    =   "cut2thechase"
     restart = "always"
     volumes {
-        container_path  =   "/test_app"
-        host_path       =   "/C/Users/GPow/stash/webapp_terraform"
-        read_only       =   false
+        container_path  =   "/usr/share/nginx/html"
+        host_path       =   "/C/Users/GPow/stash/webapp_terraform/cut2thechase/html"
     }
     ports {
-        internal    =   8080
-        external    =   8090
+        internal    =   80
+        external    =   80
     }
 }
